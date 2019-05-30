@@ -21,11 +21,12 @@
  	
  	<bean id="myFootballCoach"
  		class = "com.udemy.springDemo.FootballCoach">
+ 		<property name="fortuneService" ref="myFortune"></property>
  		</bean>
  	
  	<bean id="myCoach"
  		class="com.udemy.springDemo.TrackCoach">
- 		<property name="footballCoach" ref = "myFootballCoach" />
+ 		<!-- <property name="footballCoach" ref = "myFootballCoach" /> -->
  		
  		<constructor-arg ref = "myFortune"/>	 		
  	</bean>
