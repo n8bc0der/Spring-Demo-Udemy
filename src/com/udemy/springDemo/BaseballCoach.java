@@ -26,4 +26,10 @@ public class BaseballCoach implements Coach{
 		
 		return fortuneService.getDailyFortune();
 	}
+
+	@Override
+	public String getRandomFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

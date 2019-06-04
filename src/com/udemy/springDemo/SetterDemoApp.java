@@ -19,6 +19,12 @@ public class SetterDemoApp {
 		
 		System.out.println(footballCoach.getDailyFortune());
 		
+		System.out.println(footballCoach.getEmailAddress());
+		
+		System.out.println(footballCoach.getTeam());
+		
+		System.out.println(footballCoach.getRandomFortune());
+		
 		//close the container
 		context.close();
 		

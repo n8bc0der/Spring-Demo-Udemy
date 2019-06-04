@@ -15,21 +15,34 @@
     		class="com.luv2code.springdemo.HappyFortuneService">
     	</bean> -->
     
+ 	
+ 	<context:property-placeholder location="classpath:football.properties"/>
+ 	
  	<bean id="myFortune"
  		class = "com.udemy.springDemo.HappyFortuneService">
  	</bean>
  	
- 	<bean id="myFootballCoach"
- 		class = "com.udemy.springDemo.FootballCoach">
- 		<property name="fortuneService" ref="myFortune"></property>
+ 	<bean id="myRandomFortune"
+ 		class = "com.udemy.springDemo.RandomFortune">
  		</bean>
  	
- 	<bean id="myCoach"
- 		class="com.udemy.springDemo.TrackCoach">
- 		<!-- <property name="footballCoach" ref = "myFootballCoach" /> -->
+ 	<bean id="myFootballCoach"
+ 		class = "com.udemy.springDemo.FootballCoach">
+ 		
+ 		<property name="fortuneService" ref="myFortune"></property>
+ 		<property name="emailAddress" value="${football.email}"></property>
+ 		<property name="team" value="${football.team}"></property>
+ 		
+ 		<property name="randomFortuneService" ref="myRandomFortune"></property>
+ 		
+ 		</bean>
+ 	
+ 	<!-- <bean id="myCoach"
+ 		class="com.udemy.springDemo.FootballCoach">
+ 		<property name="footballCoach" ref = "myFootballCoach" />
  		
  		<constructor-arg ref = "myFortune"/>	 		
- 	</bean>
+ 	</bean> -->
 
     <!--
     <bean id="myCoach"
