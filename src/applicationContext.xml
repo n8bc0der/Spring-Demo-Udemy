@@ -37,12 +37,12 @@
  		
  		</bean>
  	
- 	<!-- <bean id="myCoach"
- 		class="com.udemy.springDemo.FootballCoach">
+ 	<bean id="myCoach"
+ 		class="com.udemy.springDemo.FootballCoach" lazy-init="true">
  		<property name="footballCoach" ref = "myFootballCoach" />
  		
  		<constructor-arg ref = "myFortune"/>	 		
- 	</bean> -->
+ 	</bean>
 
     <!--
     <bean id="myCoach"
