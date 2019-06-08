@@ -29,5 +29,13 @@ public class TrackCoach implements Coach {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	public void InitializeMethod() {
+		System.out.println("Inside init-method for Track Coach");
+	}
+	
+	public void DestroyMethod() {
+		System.out.println("Inside destroy-method for Track Coach");
+	}
 
 }
